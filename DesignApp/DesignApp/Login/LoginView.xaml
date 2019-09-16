@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DesignApp.Login.LoginView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:DesignApp.Core"
+    vm:ViewModelLocator.AutoWireViewModel="True"
+    NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Content>
+
+        <StackLayout VerticalOptions="FillAndExpand">
+
+            <ImageButton
+                Margin="25"
+                Command="{Binding BypassCommand}"
+                HeightRequest="125"
+                Source="" />
+
+            <StackLayout
+                Margin="40"
+                Spacing="25"
+                VerticalOptions="FillAndExpand">
+
+                <Entry
+                    Completed="UsernameEntry_Completed"
+                    Placeholder="Username"
+                    Text="{Binding Username}" />
+
+                <Entry
+                    x:Name="passwordEntry"
+                    IsPassword="true"
+                    Placeholder="Password"
+                    Text="{Binding Password}" />
+
+            </StackLayout>
+
+            <Button
+                Command="{Binding LoginCommand}"
+                HeightRequest="60"
+                Text="Login"
+                VerticalOptions="End" />
+
+        </StackLayout>
+
+    </ContentPage.Content>
+
+</ContentPage>

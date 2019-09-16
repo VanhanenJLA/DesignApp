@@ -1,7 +1,7 @@
 ﻿
 using Xamarin.Forms;
 
-namespace DesignApp.Views
+namespace DesignApp.Core
 {
     public partial class BaseNavigationView : NavigationPage
     {

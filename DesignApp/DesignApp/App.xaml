@@ -1,8 +1,118 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DesignApp.App">
+<Application
+    x:Class="DesignApp.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:view="clr-namespace:DesignApp.Core">
+
     <Application.Resources>
+
+        <!--  COLORS  -->
+        <Color x:Key="ColorBlack">#FF000000</Color>
+        <Color x:Key="ColorWhite">#FFFFFF</Color>
+        <Color x:Key="ColorNeonGreen">#72BF44</Color>
+        <Color x:Key="ColorNeonRed">#EA5441</Color>
+        <Color x:Key="ColorDarkGrey">#1a1a1a</Color>
+        <Color x:Key="ColorManatee">#929395</Color>
+
+        <!--  EXPLICIT STYLES  -->
+
+        <!--  CONTENT PAGE  -->
+        <Style x:Key="BaseContentPageStyle" TargetType="ContentPage">
+            <Setter Property="BackgroundColor" Value="{StaticResource ColorDarkGrey}" />
+        </Style>
+
+        <!--  STACKLAYOUT  -->
+        <Style x:Key="BaseStackLayoutStyle" TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="{StaticResource ColorDarkGrey}" />
+        </Style>
+
+
+        <Style
+            x:Key="DynamicStackLayoutStyle"
+            BaseResourceKey="BaseStackLayoutStyle"
+            TargetType="StackLayout" />
+
+        <!--<Style BasedOn="{StaticResource BaseStackLayoutStyle}" TargetType="StackLayout" />-->
+
+        <!--  BASE NAVIGATION VIEW  -->
+        <Style x:Key="BaseNavigationView" TargetType="view:BaseNavigationView">
+            <Setter Property="BarTextColor" Value="{StaticResource ColorWhite}" />
+            <Setter Property="BarBackgroundColor" Value="{StaticResource ColorNeonGreen}" />
+            <!--<Setter Property="IconImageSource" Value="" />-->
+        </Style>
+
+        <Style x:Key="BaseEntryStyle" TargetType="Entry">
+            <Setter Property="FontSize" Value="Default" />
+            <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="Opacity" Value="0.6" />
+            <Style.Triggers>
+                <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                    <Setter Property="Opacity" Value="1" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!--  BUTTON  -->
+        <Style x:Key="BaseButtonStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{StaticResource ColorNeonGreen}" />
+            <Setter Property="TextColor" Value="{StaticResource ColorWhite}" />
+            <Setter Property="HorizontalOptions" Value="Fill" />
+            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            <Setter Property="BorderRadius" Value="5" />
+            <Setter Property="FontSize" Value="Default" />
+            <Setter Property="FontAttributes" Value="Bold" />
+        </Style>
+        <Style x:Key="CancelButtonStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{StaticResource ColorNeonRed}" />
+        </Style>
+
+        <!--  IMAGE BUTTON  -->
+        <Style x:Key="BaseImageButtonStyle" TargetType="ImageButton">
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="HeightRequest" Value="40" />
+        </Style>
+
+
+        <!--  LABEL  -->
+        <Style x:Key="BaseLabelStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="TextColor" Value="{StaticResource ColorWhite}" />
+            <Setter Property="FontAttributes" Value="Bold" />
+        </Style>
+
+        <!--  IMPLICIT STYLES  -->
+        <Style BasedOn="{StaticResource BaseButtonStyle}" TargetType="Button" />
+        <Style BasedOn="{StaticResource BaseEntryStyle}" TargetType="Entry" />
+        <Style BasedOn="{StaticResource BaseImageButtonStyle}" TargetType="ImageButton" />
+        <!--<Style BasedOn="{StaticResource BaseContentPageStyle}" TargetType="ContentPage" />-->
+        <!--<Style BasedOn="{StaticResource CustomNavigationView}" TargetType="view:CustomNavigationView" />-->
+        <!--<Style BasedOn="{StaticResource SettingsButtonStyle}" TargetType="control:SettingsButton" />-->
+        <!--<Style BasedOn="{StaticResource LogoutButtonStyle}" TargetType="control:LogoutButton" />-->
 
     </Application.Resources>
 </Application>
+
+
+
+
+<!--<Style
+            x:Key="LogoutButtonStyle"
+            BasedOn="{StaticResource BaseImageButtonStyle}"
+            TargetType="control:LogoutButton">
+            <Setter Property="Source" Value="logout_button.png" />
+            <Setter Property="HorizontalOptions" Value="End" />
+            <Setter Property="VerticalOptions" Value="End" />
+        </Style>-->
+
+<!--<Style
+            x:Key="SettingsButtonStyle"
+            BasedOn="{StaticResource BaseImageButtonStyle}"
+            TargetType="control:SettingsButton">
+            <Setter Property="Source" Value="app_settings.png" />
+            <Setter Property="HorizontalOptions" Value="EndAndExpand" />
+            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            <Setter Property="Margin" Value="0,0,10,0" />
+            <Setter Property="Command" Value="{Binding SettingsCommand}" />
+        </Style>-->

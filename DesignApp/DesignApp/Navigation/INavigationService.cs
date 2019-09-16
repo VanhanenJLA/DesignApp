@@ -1,4 +1,4 @@
-﻿using DesignApp.ViewModels;
+﻿using DesignApp.Core;
 using System;
 using System.Threading.Tasks;
 
@@ -8,8 +8,6 @@ namespace DesignApp.Navigation
     {
         BaseViewModel PreviousPageViewModel { get; }
         Task InitializeAsync();
-        Task NavigateToAsync(Type viewModelType);
-        Task NavigateToAsync(Type viewModelType, object parameter);
         Task NavigateToAsync<TViewModel>() where TViewModel : BaseViewModel;
         Task NavigateToAsync<TViewModel>(object parameter) where TViewModel : BaseViewModel;
         Task ShowModalAsync<TViewModel>(object parameter = null) where TViewModel : BaseViewModel;

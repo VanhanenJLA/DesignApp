@@ -32,6 +32,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <BundleAssemblies>false</BundleAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -64,6 +68,13 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\Camera2\CameraCaptureListener.cs" />
+    <Compile Include="Features\Camera2\CameraCaptureStateListener.cs" />
+    <Compile Include="Features\Camera2\CameraCaptureStillPictureSessionCallback.cs" />
+    <Compile Include="Features\Camera2\CameraDroid.cs" />
+    <Compile Include="Features\Camera2\CameraStateListener.cs" />
+    <Compile Include="Features\Camera2\CameraViewServiceRenderer.cs" />
+    <Compile Include="Features\Camera2\ImageAvailableListener.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,6 +114,9 @@
       <Project>{2B74927F-937A-43C4-B4EB-6C8CB5651679}</Project>
       <Name>DesignApp</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Camera2Layout.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

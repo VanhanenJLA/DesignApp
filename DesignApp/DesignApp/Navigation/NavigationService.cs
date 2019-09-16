@@ -1,7 +1,6 @@
-﻿using DesignApp.Login;
+﻿using DesignApp.Core;
+using DesignApp.Login;
 using DesignApp.Main;
-using DesignApp.ViewModels;
-using DesignApp.Views;
 using System;
 using System.Globalization;
 using System.Reflection;
@@ -31,16 +30,6 @@ namespace DesignApp.Navigation
                 return NavigateToAsync<LoginViewModel>();
             }
             return NavigateToAsync<MainViewModel>();
-        }
-
-        public Task NavigateToAsync(Type viewModel)
-        {
-            return InternalNavigateToAsync(viewModel, null);
-        }
-
-        public Task NavigateToAsync(Type viewModel, object parameter)
-        {
-            return InternalNavigateToAsync(viewModel, parameter);
         }
 
         public async Task ShowModalAsync<TViewModel>(object parameter = null) where TViewModel : BaseViewModel

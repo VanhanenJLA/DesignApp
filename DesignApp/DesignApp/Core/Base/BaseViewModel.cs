@@ -3,7 +3,7 @@ using DesignApp.Navigation;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace DesignApp.ViewModels
+namespace DesignApp.Core
 {
     public abstract class BaseViewModel : BaseModel
     {

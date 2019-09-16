@@ -1,4 +1,6 @@
-﻿using DesignApp.Navigation;
+﻿using DesignApp.Login;
+using DesignApp.Main;
+using DesignApp.Navigation;
 using TinyIoC;
 
 namespace DesignApp.Container
@@ -12,8 +14,8 @@ namespace DesignApp.Container
         {
             Instance = new TinyIoCContainer();
 
-            //Instance.Register<LoginViewModel>();
-            //Instance.Register<MainViewModel>();
+            Instance.Register<LoginViewModel>();
+            Instance.Register<MainViewModel>();
 
             Instance.Register<INavigationService, NavigationService>();
 

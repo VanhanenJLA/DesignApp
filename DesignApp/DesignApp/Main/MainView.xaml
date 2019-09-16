@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DesignApp.Main.MainView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:cameraView="clr-namespace:DesignApp.Camera"
+    xmlns:core="clr-namespace:DesignApp.Core"
+    core:ViewModelLocator.AutoWireViewModel="True">
+
+    <ContentPage.Content>
+        <Grid>
+
+            <cameraView:CameraPreview
+                x:Name="CameraPreview"
+                BackgroundColor="Black"
+                Camera="Front" />
+
+            <ImageButton
+                Margin="30"
+                Command="{Binding TakePhotoCommand}"
+                HeightRequest="60"
+                HorizontalOptions="Center"
+                Source="shutter_icon"
+                VerticalOptions="End"
+                WidthRequest="60" />
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>
