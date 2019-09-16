@@ -10,7 +10,7 @@ namespace HobbyProject
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new ContentPage { Content = new Label { Text = "Wello Horld." } };
         }
 
         protected override void OnStart() { }
