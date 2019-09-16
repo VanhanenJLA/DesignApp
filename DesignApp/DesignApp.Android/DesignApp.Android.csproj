@@ -99,7 +99,7 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HobbyProject\DesignApp.csproj">
+    <ProjectReference Include="..\DesignApp\DesignApp.csproj">
       <Project>{2B74927F-937A-43C4-B4EB-6C8CB5651679}</Project>
       <Name>DesignApp</Name>
     </ProjectReference>
