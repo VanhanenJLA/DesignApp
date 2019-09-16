@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HobbyProject.Android", "HobbyProject.Android\HobbyProject.Android.csproj", "{DDB5AFE7-E4EC-49B5-8BF5-0898A49BDE9D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignApp.Android", "HobbyProject.Android\DesignApp.Android.csproj", "{DDB5AFE7-E4EC-49B5-8BF5-0898A49BDE9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HobbyProject", "HobbyProject\HobbyProject.csproj", "{2B74927F-937A-43C4-B4EB-6C8CB5651679}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignApp", "HobbyProject\DesignApp.csproj", "{2B74927F-937A-43C4-B4EB-6C8CB5651679}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
