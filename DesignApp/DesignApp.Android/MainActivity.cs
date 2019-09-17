@@ -13,8 +13,10 @@ namespace DesignApp.Droid
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
+        public static Activity Instance;
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            Instance = this;
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 

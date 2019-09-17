@@ -1,6 +1,10 @@
 ﻿using DesignApp.Core;
 using DesignApp.Main;
 using DesignApp.Models;
+using DesignApp.PlatformDependencies;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -35,12 +39,28 @@ namespace DesignApp.Login
 
         // TODO: Add LoginService.
         // Inject LoginService
-        public LoginViewModel()
+        public LoginViewModel() { }
+
+        public ICommand LoginCommand => new Command(async () => await LoginAsync());
+
+        private async Task LoginAsync()
         {
+            try
+            {
+                LoadingDialog.StartLoading();
+                await Task.Run(() => Thread.Sleep(1500));
+                await NavigationService.NavigateToAsync<MainViewModel>();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            finally
+            {
+                LoadingDialog.StartLoading();
+            }
 
         }
-
-        public ICommand LoginCommand => new Command(async () => await NavigationService.NavigateToAsync<MainViewModel>());
 
     }
 
