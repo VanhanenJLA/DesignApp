@@ -28,18 +28,6 @@
             <Setter Property="BackgroundColor" Value="{StaticResource ColorDarkGrey}" />
         </Style>
 
-        <!--  SETTINGS BUTTON  -->
-        <Style
-            x:Key="SettingsButtonStyle"
-            BasedOn="{StaticResource BaseImageButtonStyle}"
-            TargetType="control:SettingsButton">
-            <Setter Property="Source" Value="settings_icon.png" />
-            <Setter Property="HorizontalOptions" Value="EndAndExpand" />
-            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
-            <Setter Property="Margin" Value="0,0,10,0" />
-            <!--<Setter Property="Command" Value="{Binding SettingsCommand}" />-->
-        </Style>
-
         <!--  BASE NAVIGATION VIEW  -->
         <Style x:Key="BaseNavigationView" TargetType="view:BaseNavigationView">
             <Setter Property="BarTextColor" Value="{StaticResource ColorWhite}" />
@@ -77,6 +65,18 @@
         <Style x:Key="BaseImageButtonStyle" TargetType="ImageButton">
             <Setter Property="BackgroundColor" Value="Transparent" />
             <Setter Property="HeightRequest" Value="40" />
+        </Style>
+
+        <!--  SETTINGS BUTTON  -->
+        <Style
+            x:Key="SettingsButtonStyle"
+            BasedOn="{StaticResource BaseImageButtonStyle}"
+            TargetType="control:SettingsButton">
+            <Setter Property="Source" Value="settings_icon.png" />
+            <Setter Property="HorizontalOptions" Value="EndAndExpand" />
+            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            <Setter Property="Margin" Value="0,0,10,0" />
+            <!--<Setter Property="Command" Value="{Binding SettingsCommand}" />-->
         </Style>
 
 
