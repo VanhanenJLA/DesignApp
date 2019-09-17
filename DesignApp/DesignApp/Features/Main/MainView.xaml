@@ -4,8 +4,17 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:cameraView="clr-namespace:DesignApp.Camera"
+    xmlns:control="clr-namespace:DesignApp.Controls"
     xmlns:core="clr-namespace:DesignApp.Core"
     core:ViewModelLocator.AutoWireViewModel="True">
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <control:SettingsButton />
+            <control:SettingsButton />
+            <control:SettingsButton />
+        </StackLayout>
+    </NavigationPage.TitleView>
 
     <ContentPage.Content>
         <Grid>

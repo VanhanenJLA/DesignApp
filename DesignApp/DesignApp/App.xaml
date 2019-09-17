@@ -27,13 +27,17 @@
             <Setter Property="BackgroundColor" Value="{StaticResource ColorDarkGrey}" />
         </Style>
 
-
+        <!--  SETTINGS BUTTON  -->
         <Style
-            x:Key="DynamicStackLayoutStyle"
-            BaseResourceKey="BaseStackLayoutStyle"
-            TargetType="StackLayout" />
-
-        <!--<Style BasedOn="{StaticResource BaseStackLayoutStyle}" TargetType="StackLayout" />-->
+            x:Key="SettingsButtonStyle"
+            BasedOn="{StaticResource BaseImageButtonStyle}"
+            TargetType="control:SettingsButton">
+            <Setter Property="Source" Value="settings_icon.png" />
+            <Setter Property="HorizontalOptions" Value="EndAndExpand" />
+            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            <Setter Property="Margin" Value="0,0,10,0" />
+            <!--<Setter Property="Command" Value="{Binding SettingsCommand}" />-->
+        </Style>
 
         <!--  BASE NAVIGATION VIEW  -->
         <Style x:Key="BaseNavigationView" TargetType="view:BaseNavigationView">
@@ -88,31 +92,10 @@
         <Style BasedOn="{StaticResource BaseImageButtonStyle}" TargetType="ImageButton" />
         <!--<Style BasedOn="{StaticResource BaseContentPageStyle}" TargetType="ContentPage" />-->
         <!--<Style BasedOn="{StaticResource CustomNavigationView}" TargetType="view:CustomNavigationView" />-->
-        <!--<Style BasedOn="{StaticResource SettingsButtonStyle}" TargetType="control:SettingsButton" />-->
-        <!--<Style BasedOn="{StaticResource LogoutButtonStyle}" TargetType="control:LogoutButton" />-->
+        <Style BasedOn="{StaticResource SettingsButtonStyle}" TargetType="control:SettingsButton" />
 
     </Application.Resources>
 </Application>
 
 
 
-
-<!--<Style
-            x:Key="LogoutButtonStyle"
-            BasedOn="{StaticResource BaseImageButtonStyle}"
-            TargetType="control:LogoutButton">
-            <Setter Property="Source" Value="logout_button.png" />
-            <Setter Property="HorizontalOptions" Value="End" />
-            <Setter Property="VerticalOptions" Value="End" />
-        </Style>-->
-
-<!--<Style
-            x:Key="SettingsButtonStyle"
-            BasedOn="{StaticResource BaseImageButtonStyle}"
-            TargetType="control:SettingsButton">
-            <Setter Property="Source" Value="app_settings.png" />
-            <Setter Property="HorizontalOptions" Value="EndAndExpand" />
-            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
-            <Setter Property="Margin" Value="0,0,10,0" />
-            <Setter Property="Command" Value="{Binding SettingsCommand}" />
-        </Style>-->
