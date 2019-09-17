@@ -47,7 +47,7 @@ namespace DesignApp.Login
         {
             try
             {
-                LoadingDialog.StartLoading();
+                await Task.Run(() => LoadingDialog.StartLoading());
                 await Task.Run(() => Thread.Sleep(1500));
                 await NavigationService.NavigateToAsync<MainViewModel>();
             }
@@ -57,7 +57,7 @@ namespace DesignApp.Login
             }
             finally
             {
-                LoadingDialog.StartLoading();
+                await Task.Run(() => LoadingDialog.StopLoading());
             }
 
         }
