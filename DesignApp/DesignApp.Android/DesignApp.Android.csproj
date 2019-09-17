@@ -68,6 +68,8 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DependencyImplementations\FileManagerAndroid.cs" />
+    <Compile Include="DependencyImplementations\LoadingDialogAndroid.cs" />
     <Compile Include="Features\Camera2\CameraCaptureListener.cs" />
     <Compile Include="Features\Camera2\CameraCaptureStateListener.cs" />
     <Compile Include="Features\Camera2\CameraCaptureStillPictureSessionCallback.cs" />
