@@ -21,19 +21,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Camera\CameraView.xaml.cs">
+    <Compile Update="Features\Camera\CameraView.xaml.cs">
       <DependentUpon>CameraView.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Login\LoginView.xaml.cs">
+    <Compile Update="Features\Login\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Login\LoginView.xaml">
+    <EmbeddedResource Update="Features\Login\LoginView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Main\MainView.xaml">
+    <EmbeddedResource Update="Features\Main\MainView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
