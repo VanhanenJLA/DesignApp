@@ -15,7 +15,7 @@
                 Margin="25"
                 Command="{Binding BypassCommand}"
                 HeightRequest="125"
-                Source="" />
+                Source="placeholder_logo.png" />
 
             <StackLayout
                 Margin="40"
