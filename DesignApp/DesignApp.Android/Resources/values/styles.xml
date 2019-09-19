@@ -20,4 +20,10 @@
     <item name="colorAccent">@color/colorAccent</item>
   </style>
 
+  <style name="Theme.Splash" parent="MainTheme.Base">
+    <item name="windowNoTitle">true</item>
+    <item name="android:windowFullscreen">true</item>
+    <item name="android:windowBackground">@drawable/splash</item>
+  </style>
+
 </resources>

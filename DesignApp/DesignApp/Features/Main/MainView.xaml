@@ -11,8 +11,6 @@
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
             <control:SettingsButton />
-            <control:SettingsButton />
-            <control:SettingsButton />
         </StackLayout>
     </NavigationPage.TitleView>
 

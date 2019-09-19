@@ -76,7 +76,7 @@
             <Setter Property="HorizontalOptions" Value="EndAndExpand" />
             <Setter Property="VerticalOptions" Value="CenterAndExpand" />
             <Setter Property="Margin" Value="0,0,10,0" />
-            <!--<Setter Property="Command" Value="{Binding SettingsCommand}" />-->
+            <Setter Property="Command" Value="{Binding SettingsCommand}" />
         </Style>
 
 
